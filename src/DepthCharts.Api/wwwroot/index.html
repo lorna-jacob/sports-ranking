@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>FanDuel Depth Charts</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <img src="/images/football.png" alt="Football" class="logo-icon">
+            FanDuel NFL Depth Charts
+        </h1>
+
+        <div class="section">
+            <h2>Team Selection</h2>
+            <input type="text" id="teamId" placeholder="Team ID (e.g., TB)" value="TB">
+        </div>
+
+        <div class="section">
+            <h2>Add or Update Player's Position or Rank</h2>
+            <input type="text" id="addPosition" placeholder="Position (e.g., QB)">
+            <input type="number" id="addPlayerNumber" placeholder="Player Number">
+            <input type="text" id="addPlayerName" placeholder="Player Name">
+            <input type="number" id="addDepth" placeholder="Depth (optional)">
+            <button onclick="addPlayer()">Add Player</button>
+        </div>
+
+        <div class="section">
+            <h2>Remove Player from Position</h2>
+            <input type="text" id="removePosition" placeholder="Position">
+            <input type="number" id="removePlayerNumber" placeholder="Player Number">
+            <button onclick="removePlayer()">Remove Player</button>
+        </div>
+
+        <div class="section">
+            <h2>Get Player Backups</h2>
+            <input type="text" id="backupPosition" placeholder="Position (e.g., QB)">
+            <input type="number" id="backupPlayerNumber" placeholder="Player Number">
+            <button onclick="getBackups()">Get Backups</button>
+            <div id="backupResults"></div>
+        </div>
+
+        <div id="message"></div>
+
+        <div class="section">
+            <h2>Depth Chart</h2>
+            <div id="depthChart"></div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

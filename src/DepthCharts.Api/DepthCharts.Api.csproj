@@ -14,4 +14,8 @@
     <ProjectReference Include="..\DepthCharts.Application\DepthCharts.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>

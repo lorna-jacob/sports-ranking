@@ -1,0 +1,175 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.logo-icon {
+    height: 25px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.depth-chart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+    .depth-chart-table th,
+    .depth-chart-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+        vertical-align: top;
+        min-width: 120px;
+    }
+
+.position-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+.player-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.position-cell {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    text-align: left;
+    color: #007bff;
+}
+
+.player-cell {
+    background-color: white;
+    line-height: 1.3;
+    font-size: 11px;
+}
+
+.empty-cell {
+    background-color: #f9f9f9;
+    color: #999;
+    font-style: italic;
+}
+
+table:not(.depth-chart-table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+    table:not(.depth-chart-table) th,
+    table:not(.depth-chart-table) td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    table:not(.depth-chart-table) th {
+        background-color: #f2f2f2;
+    }
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+input, select {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.backup-result {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border-left: 4px solid #007bff;
+}
+
+    .backup-result h4 {
+        margin-top: 0;
+        color: #007bff;
+    }
+
+    .backup-result ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    .backup-result li {
+        margin: 5px 0;
+        font-weight: 500;
+    }
+
+@media (max-width: 1200px) {
+    .depth-chart-table {
+        font-size: 10px;
+    }
+
+        .depth-chart-table th,
+        .depth-chart-table td {
+            min-width: 100px;
+            padding: 6px;
+        }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .depth-chart-table {
+        font-size: 9px;
+    }
+
+        .depth-chart-table th,
+        .depth-chart-table td {
+            min-width: 80px;
+            padding: 4px;
+        }
+}
