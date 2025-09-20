@@ -1,16 +1,40 @@
-﻿using DepthCharts.Infrastructure.Repositories;
+﻿using DepthCharts.Infrastructure.Configuration;
+using DepthCharts.Infrastructure.Repositories;
+using Microsoft.Extensions.Options;
 
 namespace DepthCharts.Tests
 {
-    public class JsonDepthChartRepositoryTests : IDisposable
+    public class JsonDepthChartRepositoryTests : IAsyncLifetime, IDisposable
     {
-        private readonly string _testDataDirectory;
-        private readonly JsonDepthChartRepository _repository;
+        private TestDataFixture _fixture;
+        private JsonDepthChartRepository _repository;
 
-        public JsonDepthChartRepositoryTests()
+        public JsonDepthChartRepositoryTests() 
+        { 
+            
+        }
+
+        public async Task InitializeAsync()
         {
-            _testDataDirectory = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
-            _repository = new JsonDepthChartRepository(_testDataDirectory);
+            _fixture = new TestDataFixture();
+
+            var dataSettings = new DataSettings
+            {
+                DataDirectory = _fixture.TestDataDirectory
+            };
+            var options = Options.Create(dataSettings);
+
+            _repository = new JsonDepthChartRepository(options);
+        }
+
+        public Task DisposeAsync()
+        {
+            return Task.CompletedTask;
+        }
+
+        public void Dispose()
+        {
+            _fixture?.Dispose();
         }
 
         [Fact]
@@ -181,14 +205,6 @@ namespace DepthCharts.Tests
             
             Assert.Equal(2, depthChart["QB"].Count);
             Assert.Equal(2, depthChart["LWR"].Count);
-        }
-        
-        public void Dispose()
-        {
-            if (Directory.Exists(_testDataDirectory))
-            {
-                Directory.Delete(_testDataDirectory, true);
-            }
-        }
+        }        
     }
 }

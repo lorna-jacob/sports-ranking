@@ -1,0 +1,219 @@
+[
+  {
+    "league": "NFL",
+    "code": "QB",
+    "name": "Quarterback",
+    "group": "Offense",
+    "sortOrder": 1
+  },
+  {
+    "league": "NFL",
+    "code": "RB",
+    "name": "Running Back",
+    "group": "Offense",
+    "sortOrder": 2
+  },
+  {
+    "league": "NFL",
+    "code": "FB",
+    "name": "Fullback",
+    "group": "Offense",
+    "sortOrder": 3
+  },
+  {
+    "league": "NFL",
+    "code": "LWR",
+    "name": "Left Wide Receiver",
+    "group": "Offense",
+    "sortOrder": 10
+  },
+  {
+    "league": "NFL",
+    "code": "RWR",
+    "name": "Right Wide Receiver",
+    "group": "Offense",
+    "sortOrder": 11
+  },
+  {
+    "league": "NFL",
+    "code": "SWR",
+    "name": "Slot Wide Receiver",
+    "group": "Offense",
+    "sortOrder": 12
+  },
+  {
+    "league": "NFL",
+    "code": "TE",
+    "name": "Tight End",
+    "group": "Offense",
+    "sortOrder": 15
+  },
+  {
+    "league": "NFL",
+    "code": "LT",
+    "name": "Left Tackle",
+    "group": "Offense",
+    "sortOrder": 20
+  },
+  {
+    "league": "NFL",
+    "code": "LG",
+    "name": "Left Guard",
+    "group": "Offense",
+    "sortOrder": 21
+  },
+  {
+    "league": "NFL",
+    "code": "C",
+    "name": "Center",
+    "group": "Offense",
+    "sortOrder": 22
+  },
+  {
+    "league": "NFL",
+    "code": "RG",
+    "name": "Right Guard",
+    "group": "Offense",
+    "sortOrder": 23
+  },
+  {
+    "league": "NFL",
+    "code": "RT",
+    "name": "Right Tackle",
+    "group": "Offense",
+    "sortOrder": 24
+  },
+  {
+    "league": "NFL",
+    "code": "DE",
+    "name": "Defensive End",
+    "group": "Defense",
+    "sortOrder": 30
+  },
+  {
+    "league": "NFL",
+    "code": "DT",
+    "name": "Defensive Tackle",
+    "group": "Defense",
+    "sortOrder": 31
+  },
+  {
+    "league": "NFL",
+    "code": "NT",
+    "name": "Nose Tackle",
+    "group": "Defense",
+    "sortOrder": 32
+  },
+  {
+    "league": "NFL",
+    "code": "OLB",
+    "name": "Outside Linebacker",
+    "group": "Defense",
+    "sortOrder": 35
+  },
+  {
+    "league": "NFL",
+    "code": "ILB",
+    "name": "Inside Linebacker",
+    "group": "Defense",
+    "sortOrder": 36
+  },
+  {
+    "league": "NFL",
+    "code": "LB",
+    "name": "Linebacker",
+    "group": "Defense",
+    "sortOrder": 37
+  },
+  {
+    "league": "NFL",
+    "code": "CB",
+    "name": "Cornerback",
+    "group": "Defense",
+    "sortOrder": 40
+  },
+  {
+    "league": "NFL",
+    "code": "RCB",
+    "name": "Right Cornerback",
+    "group": "Defense",
+    "sortOrder": 41
+  },
+  {
+    "league": "NFL",
+    "code": "FS",
+    "name": "Free Safety",
+    "group": "Defense",
+    "sortOrder": 45
+  },
+  {
+    "league": "NFL",
+    "code": "SS",
+    "name": "Strong Safety",
+    "group": "Defense",
+    "sortOrder": 46
+  },
+  {
+    "league": "NFL",
+    "code": "K",
+    "name": "Kicker",
+    "group": "Special Teams",
+    "sortOrder": 50
+  },
+  {
+    "league": "NFL",
+    "code": "PK",
+    "name": "Place Kicker",
+    "group": "Special Teams",
+    "sortOrder": 50
+  },
+  {
+    "league": "NFL",
+    "code": "P",
+    "name": "Punter",
+    "group": "Special Teams",
+    "sortOrder": 51
+  },
+  {
+    "league": "NFL",
+    "code": "PT",
+    "name": "Punter",
+    "group": "Special Teams",
+    "sortOrder": 51
+  },
+  {
+    "league": "NFL",
+    "code": "LS",
+    "name": "Long Snapper",
+    "group": "Special Teams",
+    "sortOrder": 52
+  },
+  {
+    "league": "NFL",
+    "code": "KR",
+    "name": "Kick Returner",
+    "group": "Special Teams",
+    "sortOrder": 53
+  },
+  {
+    "league": "NFL",
+    "code": "PR",
+    "name": "Punt Returner",
+    "group": "Special Teams",
+    "sortOrder": 54
+  },
+  {
+    "league": "NFL",
+    "code": "H",
+    "name": "Holder",
+    "group": "Special Teams",
+    "sortOrder": 55
+  },
+  {
+    "league": "NFL",
+    "code": "KO",
+    "name": "Kickoff Specialist",
+    "group": "Special Teams",
+    "sortOrder": 56
+  }
+]

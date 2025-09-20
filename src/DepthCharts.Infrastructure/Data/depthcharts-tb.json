@@ -1,0 +1,153 @@
+{
+  "QB": [
+    {
+      "id": 21,
+      "teamId": "TB",
+      "position": "QB",
+      "playerNumber": 12,
+      "positionDepth": 0
+    },
+    {
+      "id": 2,
+      "teamId": "TB",
+      "position": "QB",
+      "playerNumber": 11,
+      "positionDepth": 1
+    },
+    {
+      "id": 3,
+      "teamId": "TB",
+      "position": "QB",
+      "playerNumber": 2,
+      "positionDepth": 2
+    }
+  ],
+  "LWR": [
+    {
+      "id": 4,
+      "teamId": "TB",
+      "position": "LWR",
+      "playerNumber": 13,
+      "positionDepth": 0
+    },
+    {
+      "id": 5,
+      "teamId": "TB",
+      "position": "LWR",
+      "playerNumber": 1,
+      "positionDepth": 1
+    },
+    {
+      "id": 6,
+      "teamId": "TB",
+      "position": "LWR",
+      "playerNumber": 10,
+      "positionDepth": 2
+    }
+  ],
+  "RB": [
+    {
+      "id": 7,
+      "teamId": "TB",
+      "position": "RB",
+      "playerNumber": 7,
+      "positionDepth": 0
+    },
+    {
+      "id": 8,
+      "teamId": "TB",
+      "position": "RB",
+      "playerNumber": 27,
+      "positionDepth": 1
+    }
+  ],
+  "TE": [
+    {
+      "id": 9,
+      "teamId": "TB",
+      "position": "TE",
+      "playerNumber": 87,
+      "positionDepth": 0
+    },
+    {
+      "id": 10,
+      "teamId": "TB",
+      "position": "TE",
+      "playerNumber": 84,
+      "positionDepth": 1
+    },
+    {
+      "id": 17,
+      "teamId": "TB",
+      "position": "TE",
+      "playerNumber": 12,
+      "positionDepth": 2
+    }
+  ],
+  "LB": [
+    {
+      "id": 11,
+      "teamId": "TB",
+      "position": "LB",
+      "playerNumber": 45,
+      "positionDepth": 0
+    },
+    {
+      "id": 12,
+      "teamId": "TB",
+      "position": "LB",
+      "playerNumber": 54,
+      "positionDepth": 1
+    }
+  ],
+  "CB": [
+    {
+      "id": 13,
+      "teamId": "TB",
+      "position": "CB",
+      "playerNumber": 24,
+      "positionDepth": 0
+    },
+    {
+      "id": 14,
+      "teamId": "TB",
+      "position": "CB",
+      "playerNumber": 23,
+      "positionDepth": 1
+    }
+  ],
+  "K": [
+    {
+      "id": 15,
+      "teamId": "TB",
+      "position": "K",
+      "playerNumber": 3,
+      "positionDepth": 0
+    }
+  ],
+  "P": [
+    {
+      "id": 16,
+      "teamId": "TB",
+      "position": "P",
+      "playerNumber": 8,
+      "positionDepth": 0
+    }
+  ],
+  "AB": [
+    {
+      "id": 19,
+      "teamId": "TB",
+      "position": "AB",
+      "playerNumber": 42,
+      "positionDepth": 0
+    },
+    {
+      "id": 20,
+      "teamId": "TB",
+      "position": "AB",
+      "playerNumber": 45,
+      "positionDepth": 1
+    }
+  ]
+}

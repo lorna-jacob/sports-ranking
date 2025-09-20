@@ -1,6 +1,5 @@
 using DepthCharts.Api.Models;
 using DepthCharts.Application.Abstractions;
-using DepthCharts.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DepthCharts.Api.Controllers

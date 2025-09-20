@@ -1,4 +1,35 @@
 const API_BASE = '/api/depthchart';
+const TEAMS_API = '/api/teams';
+
+async function loadTeams() {
+    try {
+        const response = await fetch(TEAMS_API);
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+
+        const teams = await response.json();
+        const teamSelect = document.getElementById('teamId');
+
+        teamSelect.innerHTML = '<option value="">Select a team...</option>';
+
+        teams.forEach(team => {
+            const option = document.createElement('option');
+            option.value = team.id;
+            option.textContent = `${team.name} (${team.id})`;
+            teamSelect.appendChild(option);
+        });
+
+        const tbOption = teamSelect.querySelector('option[value="TB"]');
+        if (tbOption) {
+            teamSelect.value = 'TB';
+            loadDepthChart();
+        }
+    } catch (error) {
+        console.error('Load teams error:', error);
+        showMessage('Failed to load teams: ' + error.message, 'error');
+    }
+}
 
 async function addPlayer() {
     const teamId = document.getElementById('teamId').value;
@@ -14,8 +45,8 @@ async function addPlayer() {
 
     const payload = {
         position: position,
-        player: { number: playerNumber, name: playerName },
-        positionDepth: depth ? parseInt(depth) : null
+        player: { number: playerNumber, name: playerName, teamId: teamId },
+        positionDepth: depth ? parseInt(depth) : null       
     };
 
     try {
@@ -99,7 +130,10 @@ async function getBackups() {
 
 async function loadDepthChart() {
     const teamId = document.getElementById('teamId').value;
-    if (!teamId) return;
+    if (!teamId) {
+        document.getElementById('depthChart').innerHTML = '<p>Please select a team to view depth chart.</p>';
+        return;
+    }
 
     try {
         const response = await fetch(`${API_BASE}/${teamId}/depthchart`);
@@ -117,16 +151,19 @@ async function loadDepthChart() {
 
 function displayDepthChart(groupedChart) {
     const container = document.getElementById('depthChart');
+    const teamId = document.getElementById('teamId').value;
+    const teamSelect = document.getElementById('teamId');
+    const selectedTeamText = teamSelect.options[teamSelect.selectedIndex]?.text || teamId;
 
     if (!groupedChart || Object.keys(groupedChart).length === 0) {
-        container.innerHTML = '<p>No players in depth chart yet. Add some players to get started!</p>';
+        container.innerHTML = `<h3>${selectedTeamText} Depth Chart</h3><p>No players in depth chart yet. Add some players to get started!</p>`;
         return;
     }
 
-    let html = '';
+    let html = `<h3>${selectedTeamText} Depth Chart</h3>`;
 
     for (const [groupName, positionsArray] of Object.entries(groupedChart)) {
-        html += `<h3>${groupName}</h3>`;
+        html += `<h4>${groupName}</h4>`;
 
         let maxDepth = 0;
         if (Array.isArray(positionsArray)) {
@@ -221,5 +258,5 @@ function clearBackupForm() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    loadDepthChart();
+    loadTeams();
 });

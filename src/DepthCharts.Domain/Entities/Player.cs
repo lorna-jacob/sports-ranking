@@ -19,5 +19,16 @@ namespace DepthCharts.Domain.Entities
         [Required]
         [StringLength(100)]
         public string Name { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Team the player belongs to
+        /// </summary>
+        [Required]
+        public string TeamId { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Gets a unique identifier for this player (team + number)
+        /// </summary>
+        public string GetUniqueId() => $"{TeamId}_{Number}";
     }
 }

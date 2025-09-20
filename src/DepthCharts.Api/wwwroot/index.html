@@ -13,7 +13,9 @@
 
         <div class="section">
             <h2>Team Selection</h2>
-            <input type="text" id="teamId" placeholder="Team ID (e.g., TB)" value="TB">
+            <select id="teamId" onchange="loadDepthChart()">
+                <option value="">Select a team...</option>
+            </select>
         </div>
 
         <div class="section">

@@ -9,12 +9,10 @@ namespace DepthCharts.Application.Services
     public class DepthChartService : IDepthChartService
     {
         private readonly IDepthChartRepository _depthChartRepository;
-        private readonly ILogger<DepthChartService> _logger;
 
         public DepthChartService(IDepthChartRepository depthChartRepository, ILogger<DepthChartService> logger)
         {
             _depthChartRepository = depthChartRepository;
-            _logger = logger;
         }
 
         public async Task AddPlayerAsync(string teamId, string position, Player player, int? positionDepth, CancellationToken ct)
@@ -97,6 +95,11 @@ namespace DepthCharts.Application.Services
             Guard.NotEmpty(player.Name, "player.Name");
 
             await _depthChartRepository.AddOrUpdatePlayerAsync(player, ct);
+        }
+
+        public async Task<List<Team>> GetTeamsAsync(CancellationToken ct)
+        {
+            return await _depthChartRepository.GetTeamsAsync(ct);
         }
     }
 }

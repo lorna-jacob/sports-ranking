@@ -1,5 +1,6 @@
 ﻿# sports-ranking
-A comprehensive NFL depth chart management system built with dotnet8. This application allows teams to manage player positions and depth rankings with a modern web interface.
+A comprehensive NFL depth chart management system built with .NET. 
+This application allows teams to manage player positions and depth rankings with a modern web interface.
 
 ## 🏈 Overview
 
@@ -42,11 +43,12 @@ The application comes pre-seeded with Tampa Bay Buccaneers data including:
 - **Players**: Tom Brady, Mike Evans, Rob Gronkowski, and more
 - **Positions**: NFL positions (QB, RB, LWR, TE, etc.)
 - **Depth Chart**: Sample depth chart entries for demonstration
-- 
+- **Teams**: There are also some data for other NFL teams such as Kansas City Chiefs, Green Bay Packers, etc.
+
 ## 📋 Assumptions & Design Decisions
 
-- Currently, this app is designed for a single user (probably a team manager) who manages the depth chart. Data are stored in JSON files locally.
-- However, this can be easily extended to have a database backend in the future by adding another implementation of `IDepthChartRepository`
+- Currently, this app is designed for a single user (probably a team manager) who manages the depth chart. 
+- Data are stored in JSON files locally.
+- Zero-based depth indexing for adding player (0 = starter, 1 = first backup, and so on)
+- In production, I assume that a database is added for persisting data and a repository implementation of `IDepthChartRepository` with database specific logic would be created.
 - The API would be hosted in a cloud service like AWS for scalability and availability. The API can be consumed by multiple client applications in the future, ie mobile apps.
-- Current implementation focuses on present state (no historical depth chart tracking)
-- Zero-based depth indexing for adding player (0 = starter, 1 = first backup, and so on.), but non-zero-based indexing for removing player (1 = starter, 2 = first backup, and so on.) to align with user expectations.

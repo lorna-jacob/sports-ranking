@@ -10,5 +10,6 @@ namespace DepthCharts.Infrastructure.Abstractions
         Task<Dictionary<string, List<Player>>> GetFullDepthChartAsync(string teamId, CancellationToken ct);
         Task AddOrUpdatePlayerAsync(Player player, CancellationToken ct);
         Task<IReadOnlyList<PositionMetadata>> GetPositionsAsync(string league, CancellationToken ct);
+        Task<List<Team>> GetTeamsAsync(CancellationToken ct);
     }
 }

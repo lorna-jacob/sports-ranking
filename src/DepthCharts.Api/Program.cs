@@ -2,16 +2,16 @@ using DepthCharts.Api.Middlewares;
 using DepthCharts.Application.Abstractions;
 using DepthCharts.Application.Services;
 using DepthCharts.Infrastructure.Abstractions;
+using DepthCharts.Infrastructure.Configuration;
 using DepthCharts.Infrastructure.Repositories;
 using DepthCharts.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var dataDirectory = builder.Configuration.GetValue<string>("DataSettings:DataDirectory") ?? "Data";
-var fullDataPath = Path.Combine(Directory.GetCurrentDirectory(), dataDirectory);
+builder.Services.Configure<DataSettings>(builder.Configuration.GetSection(DataSettings.SectionName));
 
 builder.Services.AddScoped<IDepthChartService, DepthChartService>();
-builder.Services.AddScoped<IDepthChartRepository>(provider => new JsonDepthChartRepository(fullDataPath));
+builder.Services.AddScoped<IDepthChartRepository, JsonDepthChartRepository>();
 builder.Services.AddScoped<IDataSeeder, JsonDataSeeder>();
 
 builder.Services.AddControllers();

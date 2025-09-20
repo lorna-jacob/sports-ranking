@@ -9,5 +9,6 @@ namespace DepthCharts.Application.Abstractions
         Task<List<Player>> GetBackupsAsync(string teamId, string position, int playerNumber, CancellationToken ct);
         Task<IReadOnlyDictionary<string, List<(string position, List<Player> players)>>> GetFullDepthChartAsync(string teamId, string league, CancellationToken ct);
         Task AddOrUpdatePlayerAsync(Player player, CancellationToken ct);
+        Task<List<Team>> GetTeamsAsync(CancellationToken ct);
     }
 }

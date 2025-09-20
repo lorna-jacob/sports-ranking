@@ -1,0 +1,42 @@
+[
+  {
+    "id": "TB",
+    "name": "Tampa Bay Buccaneers",
+    "league": "NFL"
+  },
+  {
+    "id": "NE",
+    "name": "New England Patriots",
+    "league": "NFL"
+  },
+  {
+    "id": "KC",
+    "name": "Kansas City Chiefs",
+    "league": "NFL"
+  },
+  {
+    "id": "GB",
+    "name": "Green Bay Packers",
+    "league": "NFL"
+  },
+  {
+    "id": "BUF",
+    "name": "Buffalo Bills",
+    "league": "NFL"
+  },
+  {
+    "id": "LAR",
+    "name": "Los Angeles Rams",
+    "league": "NFL"
+  },
+  {
+    "id": "DAL",
+    "name": "Dallas Cowboys",
+    "league": "NFL"
+  },
+  {
+    "id": "SF",
+    "name": "San Francisco 49ers",
+    "league": "NFL"
+  }
+]
