@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<DataSettings>(builder.Configuration.GetSection(DataSettings.SectionName));
 
 builder.Services.AddScoped<IDepthChartService, DepthChartService>();
-builder.Services.AddScoped<IDepthChartRepository, JsonDepthChartRepository>();
+builder.Services.AddSingleton<IDepthChartRepository, JsonDepthChartRepository>();
 builder.Services.AddScoped<IDataSeeder, JsonDataSeeder>();
 
 builder.Services.AddControllers();
