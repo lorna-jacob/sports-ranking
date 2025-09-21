@@ -23,9 +23,7 @@ namespace DepthCharts.Tests
                 new() { League = "NFL", Code = "LWR", Name = "Left Wide Receiver", Group = "Offense", SortOrder = 10 },
                 new() { League = "NFL", Code = "TE", Name = "Tight End", Group = "Offense", SortOrder = 15 },
                 new() { League = "NFL", Code = "CB", Name = "Cornerback", Group = "Defense", SortOrder = 40 },
-                new() { League = "NFL", Code = "K", Name = "Kicker", Group = "Special Teams", SortOrder = 50 },
-                new() { League = "NBA", Code = "PG", Name = "Point Guard", Group = "Backcourt", SortOrder = 1 },
-                new() { League = "NBA", Code = "SG", Name = "Shooting Guard", Group = "Backcourt", SortOrder = 2 }
+                new() { League = "NFL", Code = "K", Name = "Kicker", Group = "Special Teams", SortOrder = 50 }
             };
 
             var jsonOptions = new JsonSerializerOptions

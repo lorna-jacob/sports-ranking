@@ -49,6 +49,7 @@ namespace DepthCharts.Infrastructure.Repositories
                 positionEntries.RemoveAll(p => p.PlayerNumber == playerNumber);
 
                 int targetDepth = positionDepth ?? positionEntries.Count;
+                targetDepth = targetDepth < 0 ? positionEntries.Count : targetDepth;
 
                 foreach (var entry in positionEntries.Where(p => p.PositionDepth >= targetDepth))
                 {

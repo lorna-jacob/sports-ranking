@@ -83,6 +83,45 @@ namespace DepthCharts.Tests
             Assert.Equal(2, qbPlayers[3].Number);
         }
 
+        [Theory]
+        [InlineData(-5)]
+        [InlineData(999)]
+        public async Task AddPlayer_WithExtremeDepth_ClampsDepthToValidRange(int requestedDepth)
+        {
+            // Arrange
+            var ct = CancellationToken.None;
+            await _repository.AddPlayerAsync("TB", "QB", 12, 0, ct); // starter
+            await _repository.AddPlayerAsync("TB", "QB", 11, requestedDepth, ct); // clamp: should append at end (=1)
+
+            // Act
+            var chart = await _repository.GetFullDepthChartAsync("TB", ct);
+            
+            // Assert
+            var list = chart["QB"];
+            Assert.Equal(2, list.Count);
+            Assert.Equal(12, list[0].Number);
+            Assert.Equal(11, list[1].Number);
+        }
+
+        [Fact]
+        public async Task AddPlayer_WhenReAddExistingPlayer_MovesWithoutDuplicate()
+        {
+            // Arrange
+            var ct = CancellationToken.None;
+            await _repository.AddPlayerAsync("TB", "QB", 12, 0, ct);
+            await _repository.AddPlayerAsync("TB", "QB", 11, 1, ct);
+
+            await _repository.AddPlayerAsync("TB", "QB", 12, 1, ct);
+
+            // Act
+            var chart = await _repository.GetFullDepthChartAsync("TB", ct);
+
+            // Assert
+            var list = chart["QB"];
+            Assert.Equal(2, list.Count); //still only 2 players
+        }
+
+
         [Fact]
         public async Task RemovePlayerAsync_WithExistingPlayer_ReturnsPlayerAndRemovesFromChart()
         {
@@ -159,6 +198,20 @@ namespace DepthCharts.Tests
 
             // Act
             var backups = await _repository.GetBackupsAsync(teamId, position, 2, ct);
+
+            // Assert
+            Assert.Empty(backups);
+        }
+
+        [Fact]
+        public async Task GetBackups_ForUnknownPlayer_ReturnsEmpty()
+        {
+            // Arrange
+            var ct = CancellationToken.None;
+            await _repository.AddPlayerAsync("TB", "QB", 12, 0, ct);
+
+            // Act
+            var backups = await _repository.GetBackupsAsync("TB", "QB", 99, ct);
 
             // Assert
             Assert.Empty(backups);
