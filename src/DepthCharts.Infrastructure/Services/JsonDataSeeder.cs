@@ -4,6 +4,7 @@ using DepthCharts.Domain.Entities;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Text.Json;
+using DepthCharts.Domain.Abstractions;
 
 namespace DepthCharts.Infrastructure.Services
 {

@@ -1,5 +1,5 @@
-﻿using DepthCharts.Domain.Entities;
-using DepthCharts.Infrastructure.Abstractions;
+﻿using DepthCharts.Domain.Abstractions;
+using DepthCharts.Domain.Entities;
 using DepthCharts.Infrastructure.Configuration;
 using Microsoft.Extensions.Options;
 using System.Text.Json;

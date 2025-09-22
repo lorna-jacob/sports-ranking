@@ -1,7 +1,7 @@
 ﻿using DepthCharts.Application.Abstractions;
 using DepthCharts.Application.Common;
+using DepthCharts.Domain.Abstractions;
 using DepthCharts.Domain.Entities;
-using DepthCharts.Infrastructure.Abstractions;
 using Microsoft.Extensions.Logging;
 
 namespace DepthCharts.Application.Services

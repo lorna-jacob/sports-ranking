@@ -1,6 +1,7 @@
 using DepthCharts.Api.Middlewares;
 using DepthCharts.Application.Abstractions;
 using DepthCharts.Application.Services;
+using DepthCharts.Domain.Abstractions;
 using DepthCharts.Infrastructure.Abstractions;
 using DepthCharts.Infrastructure.Configuration;
 using DepthCharts.Infrastructure.Repositories;

@@ -1,6 +1,6 @@
 ﻿using DepthCharts.Domain.Entities;
 
-namespace DepthCharts.Infrastructure.Abstractions
+namespace DepthCharts.Domain.Abstractions
 {
     public interface IDepthChartRepository
     {
